@@ -16,7 +16,7 @@ function AddTodoForm () {
     <div id="form">
         <form>
             <input className="todo-input" type="text" placeholder="Add a task." />
-            <button className="todo-btn" type="submit">
+            <button className="todo-btn" type="submit" onClick={handleAdd}>
                 I Got This!
             </button>
         </form>
