@@ -5,13 +5,20 @@
 }
 
 body {
-    /* #363532, rgb(88, 111, 112) */
+    color: #363532, rgb(88, 111, 112);
     align-items: center;
     display: flex;
     flex-direction: column;
     font-family: 'Work Sans', sans-serif;
     min-height: 100vh;
     padding-top: 3%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* vertical center */
 }
 
 /* Body light or darker themes */
@@ -39,11 +46,19 @@ body {
     width: 100%;
 }
 
+#datetime {
+  text-align: center;
+  margin: 0.75rem 0 1.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
 #header {
+    position: relative;
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 3rem;
     min-height: 25vh;
     width: 100%;
@@ -51,11 +66,14 @@ body {
 
 /* Theme buttons div */
 .flexrow-container {
+    position: absolute;
+    top: 0.75rem;
+    right: 3%;
     align-items: center;
     align-self: flex-end;
     display: flex;
     justify-content: space-around;
-    margin-right: 3%;
+    margin-right: 0;
 }
 
 .theme-selector {
@@ -94,8 +112,8 @@ body {
     white-space: pre;
     overflow: hidden;     
     letter-spacing: 0.20rem;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 1rem;
     max-width: 480px;
   }
   
@@ -135,6 +153,8 @@ form {
     margin: 15px 0;
     padding: 0.8rem;
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 form input {
@@ -142,7 +162,7 @@ form input {
     font-size: 17px;
     border: none;
     outline: none;
-    /* border-radius: 15; */
+    border-radius: 15;
     border-top-left-radius: 17px;
     border-bottom-left-radius: 17px;
     max-width: 500px;
@@ -256,8 +276,8 @@ form button {
 
 .todo {
     margin: 1rem;
-    /* background: rgb(247, 226, 223); */
-    /* color: black; */
+    background: rgb(247, 226, 223);
+    color: black;
     font-size: 19px;
     display: flex;
     justify-content: space-between;
@@ -282,8 +302,8 @@ form button {
 
 .todo li{
     padding: 7px;
-    /* word-wrap: break-word; */
-    /* flex-wrap: wrap; */
+    word-wrap: break-word;
+    flex-wrap: wrap;
     font-size: 20px;
     flex: 1; /* To push the trash and the check button to the right */
     border-radius: 30px;
